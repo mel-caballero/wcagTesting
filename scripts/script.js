@@ -150,9 +150,16 @@ function createTable() {
 				tr = document.createElement('tr')
 				headers.forEach(head => {
 					if (head.view===true && (filterLevel.find(lev => lev === item.level) || filterLevel[0] === 'All') && (filterVersion.find(lev => lev === item.version) || filterVersion[0] === 'All')) {
-						const td = document.createElement('td');
-						td.innerHTML = item[head.name];
-						tr.appendChild(td);
+						if (head.name === 'criteria') {
+							const th = document.createElement('th')
+							th.setAttribute('scope', 'row')
+							th.innerHTML = item[head.name];
+							tr.appendChild(th)
+						} else {
+							const td = document.createElement('td');
+							td.innerHTML = item[head.name];
+							tr.appendChild(td);
+						}
 					}
 				});
 				if (tr.firstElementChild != null){
@@ -165,9 +172,16 @@ function createTable() {
 				tr = document.createElement('tr')
 				headers.forEach(head => {
 					if (head.view===true && (filterLevel.find(lev => lev === item.level) || filterLevel[0] === 'All') && (filterVersion.find(lev => lev === item.version) || filterVersion[0] === 'All')) {
-						const td = document.createElement('td');
-						td.innerHTML = item[head.name];
-						tr.appendChild(td);
+						if (head.name === 'criteria') {
+							const th = document.createElement('th')
+							th.setAttribute('scope', 'row')
+							th.innerHTML = item[head.name];
+							tr.appendChild(th)
+						} else {
+							const td = document.createElement('td');
+							td.innerHTML = item[head.name];
+							tr.appendChild(td);
+						}
 					}
 				});
 				if (tr.firstElementChild != null){
@@ -181,9 +195,16 @@ function createTable() {
 				tr = document.createElement('tr')
 				headers.forEach(head => {
 					if (head.view===true && (filterLevel.find(lev => lev === item.level) || filterLevel[0] === 'All') && (filterVersion.find(lev => lev === item.version) || filterVersion[0] === 'All')) {
-						const td = document.createElement('td');
-						td.innerHTML = item[head.name];
-						tr.appendChild(td);
+						if (head.name === 'criteria') {
+							const th = document.createElement('th')
+							th.setAttribute('scope', 'row')
+							th.innerHTML = item[head.name];
+							tr.appendChild(th)
+						} else {
+							const td = document.createElement('td');
+							td.innerHTML = item[head.name];
+							tr.appendChild(td);
+						}
 					}
 				});
 				if (tr.firstElementChild != null){
