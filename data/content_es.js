@@ -421,9 +421,8 @@ const test_es = {
       'level' : 'A',
       'version' : '2.0', 
       'goal' : 'Asegurar que, siempre que sea posible, se pueda operar el contenido a través de teclado.', 
-      'verification' : 'A. Toda la funcionalidad de la página debe ser operable a través del teclado, excepto cuando dicha funcionalidad sea imposible realizarse con teclado (por ejemplo, un dibujo a mano
-      alzada).', 
-      'tools' : '',
+      'verification' : 'A. Toda la funcionalidad de la página debe ser operable a través del teclado, excepto cuando dicha funcionalidad sea imposible realizarse con teclado (por ejemplo, un dibujo a mano alzada).', 
+      'tools' : '<p>Comprobación manual</p><ol><li>Utilizar el teclado para operar con las diversas funcionalidades que la página ofrece.</li><li>Verificar que se puede operar adecuadamente con todas las funcionalidades utilizando solamente el teclado.</li></ol>',
     },
   ]
 };
