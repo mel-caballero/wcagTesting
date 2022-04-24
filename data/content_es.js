@@ -720,5 +720,29 @@ const test_es = {
       'verification' : 'A. En los procesos que implican para el usuario compromisos legales o financieros, en los que se pueden modificar o eliminar datos del usuario o que envían el resultado de una prueba o test, se cumple que dichas acciones son reversibles o bien el usuario puede revisar o confirmar los datos antes de enviarlos.', 
       'tools' : '<p>Comprobación manual.</p><ol><li>Localizar los procesos en los que un error al introducir los datos puede tener importantes implicaciones legales, económicas o sobre la información perteneciente a los usuarios.</li><li>Verificar que se cumple alguna de las siguientes condiciones:<ul><li>La acción es reversible.</li><li>Los datos se pueden revisar y corregir.</li><li>Se solicita conformación antes del envío.</li></ul></li></ol>',
     },
+    { // 4.1.1. A
+      'criteria' : '4.1.1 Procesamiento',
+      'level' : 'A',
+      'version' : '2.0', 
+      'goal' : 'Asegurar que los agentes de usuario y productos de apoyo puedan interpretar correctamente y procesar (parsear) el contenido.', 
+      'verification' : 'A. El código no debe tener errores de sintaxis y debe estar bien formado de forma que pueda ser procesado de forma automática sin ambigüedades.', 
+      'tools' : '<p><a href="https://validator.w3.org/" title="">Herramienta de validación automática de código del W3C</a>.</p><ol><li>Insertar la URL de la página y pulsar “Check”.</li><li>Pulsar en el botón “Message Filtering” para visualizar los errores agrupados por el tipo de error.</li><li>Comprobar que no existen errores de los siguientes tipos:<ul><li>Apertura y cierre de etiquetas.</li><li>Identificadores únicos.</li><li>Relaciones uno a uno (etiquetas y controles de formulario, accesskey únicos).</li><li>Atributos repetidos en el mismo elemento.</li><li>Valores de atributos sin entrecomillar.</li></ul></li></ol>',
+    },
+    { // 4.1.2. A
+      'criteria' : '4.1.2 Nombre, función, valor',
+      'level' : 'A',
+      'version' : '2.0', 
+      'goal' : 'Asegurar que los productos de apoyo puedan obtener información, interactuar y estar al corriente del estado de los controles de interfaz de usuario.', 
+      'verification' : 'A. Los elementos de la interfaz de usuario (formularios, enlaces, componentes personalizados con scripts, etc.) deben ser accesibles. Es decir, los productos de apoyo deben poder reconocer cuál es su nombre, su función y su valor o estado y pueden interactuar con ellos.', 
+      'tools' : '<p><a href="https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm?hl=es" title="Web Developer Toolbar" target="_blank">Web Developer Toolbar</a>.</p><ol><li>Localizar los componentes de interacción.</li><li>Comprobar que se han creado teniendo en cuenta la accesibilidad. Por ejemplo, usando enlaces y controles de formulario en HTML siguiendo los requisitos de accesibilidad aplicables (texto significativo, etiquetas descriptivas, etc.).</li><li>Localizar los marcos o marcos en línea existentes.</li><li>Verificar que se proporciona un título en el atributo title que describa de forma breve cuál es la finalidad o contenido de cada marco. Para ello con la herramienta “Web Developer Toolbar” seleccionar “Information - Display title attributes” y “Outline - Outline Frames”.</li></ol>',
+    },
+    { // 4.1.3. A
+      'criteria' : '4.1.3 Mensajes de estado',
+      'level' : 'AA',
+      'version' : '2.1', 
+      'goal' : 'Informar a los usuarios acerca de cambios importantes en el contenido (que no tengan el foco), de manera que no interrumpa innecesariamente su trabajo.', 
+      'verification' : 'A. Los mensajes de estado deben poder ser identificados por software a través de sus roles o propiedades de forma que se puedan transmitir a los usuarios sin necesidad de recibir el foco.', 
+      'tools' : '<p><a href="https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm?hl=es" title="Web Developer Toolbar" target="_blank">Web Developer Toolbar</a>.</p><ol><li>Localizar los contenidos que se añaden de manera dinámica a la página y que proporcionan información de los siguientes tipos:<ul><li>El éxito o resultado de una acción.</li><li>El estado de espera de una acción.</li><li>El progreso de un proceso.</li><li>La existencia de errores.</li></ul></li><li>Comprobar que cuando se actualiza esta información el componente no recibe el foco. (En el caso de que sí reciba el foco, este criterio no aplica y no se debe seguir comprobando).</li><li>Comprobar si tiene un rol de WAI-ARIA definido. Para ello, seleccionar “Information - Display ARIA roles”.</li><li>Verificar que el rol es correcto de acuerdo a su función.</li></ol>',
+    },
   ]
 };
