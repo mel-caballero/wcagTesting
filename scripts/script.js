@@ -410,6 +410,27 @@ function init() {
 
 }
 
+
+
 init();
 translateInterface();
 createTable();
+$(document).ready(function() {
+	$('#wcagTable').DataTable( {
+		"order": [[ 0, "asc" ]], //Default ordering (sorting)
+		stateSave: true, // State saving
+		/*"language": { // Language options
+			"lengthMenu": "Mostrar _MENU_ por página",
+			"zeroRecords": "Nothing found - sorry",
+			"info": "Showing page _PAGE_ of _PAGES_",
+			"infoEmpty": "No records available",
+			"infoFiltered": "(filtered from _MAX_ total records)"
+		},*/
+		"language": { //https://datatables.net/plug-ins/i18n/
+			"url": "//cdn.datatables.net/plug-ins/1.11.5/i18n/en-GB.json",
+			"url": "//cdn.datatables.net/plug-ins/1.11.5/i18n/ca.json",
+			"url": "//cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json"
+		},
+		"lengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]], // Page length options
+	} );
+} );
